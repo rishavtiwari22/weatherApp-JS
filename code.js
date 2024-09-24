@@ -46,7 +46,11 @@ val[0].addEventListener("click", (e) => {
                 img[0].setAttribute('src', './images/tornado.png');
             } else if (data.weather[0].main === 'Thunderstorm') {
                 img[0].setAttribute('src', './images/thunder.png');
-            } 
+            } else if (data.weather[0].main === 'Thunderstorm') {
+                img[0].setAttribute('src', './images/snow.png');
+            } else {
+                img[0].setAttribute('src', './images/normal.png');
+            }
         })
-        .catch((e) => console.log('Error... ',e.message))
+        .catch((e) => alert('City Not Found!'));
 });
